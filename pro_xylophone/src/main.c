@@ -25,6 +25,8 @@
 #define An PD7
 #define Hn PB0
 #define cn PB1
+
+#define dl200ms = 200
 /*********************************************************/
 
 /* Includes ----------------------------------------------------------*/
@@ -34,10 +36,15 @@
 #include <gpio.h>           // Peter Fleury's UART library
 #include <gpio.c>           // Peter Fleury's UART library
 #include <stdlib.h>         // C library. Needed for number conversions
-#include <util/delay.h> // Functions for busy-wait delay loops
+#include <util/delay.h>     // Functions for busy-wait delay loops
+#include <lcd.h>            // Peter Fleury's LCD library
+#include <oled.h>
+#include <xylo.h>
 
 
 /* Function definitions ----------------------------------------------*/
+
+
 /**********************************************************************
  * Function: Main function where the program execution begins
  * Purpose:  Use Timer/Counter1 and transmit UART data four times 
@@ -54,6 +61,9 @@ int main(void)
     TIM1_OVF_262MS
     TIM1_OVF_ENABLE
 
+    oled_init(OLED_DISP_ON);
+    oled_clrscr();
+
     // Enables interrupts by setting the global interrupt mask
     sei();
 
@@ -68,38 +78,53 @@ int main(void)
 
 
 
-    uint8_t uptime = 0;
+
+    uint16_t notesArr[] = {
+        (20<<8)+Cn,
+        (20<<8)+Cn,
+        (40<<8)+Dn,
+        (40<<8)+Cn,
+        (40<<8)+Fn,
+        (80<<8)+En,
+
+        (20<<8)+Cn,
+        (20<<8)+Cn,
+        (40<<8)+Dn,
+        (40<<8)+Cn,
+        (40<<8)+Gn,
+        (80<<8)+Fn,
+
+        (20<<8)+Cn,
+        (20<<8)+Cn,
+        (40<<8)+cn,
+        (40<<8)+An,
+        (40<<8)+Fn,
+        (40<<8)+En,
+        (40<<8)+Dn,
+
+        (20<<8)+cn,
+        (20<<8)+cn,
+        (40<<8)+An,
+        (40<<8)+Fn,
+        (40<<8)+Gn,
+        (80<<8)+Fn,
+      };
+
+    uint8_t notei = 0;
     // Infinite loop
     while (1)
     {
       _delay_ms(50);
-      
-      /*if (uptime == 0){
-        uptime = 1;
-        GPIO_write_high(&PORTD, PD2);
+
+         for (uint16_t i = 0; i<sizeof(notesArr); i++)
+      {
+        play_note_endian(notesArr[i]);
+        draw_note(notesArr[i] & 0xff, notei);
+        notei++;
+        notei %=21;
       }
-      else{
-        uptime = 0;
-        GPIO_write_low(&PORTD, PD2);
-      }*/
-
-      play_note(Cn);
-      _delay_ms(50);
-      play_note(Dn);
-      _delay_ms(50);
-      play_note(En);
-      _delay_ms(50);
-      play_note(Fn);
-      _delay_ms(50);
-      play_note(Gn);
-      _delay_ms(50);
-      play_note(An);
-      _delay_ms(50);
-      play_note(Hn);
-      _delay_ms(50);
-      play_note(cn);
-      _delay_ms(50);
-
+      
+        oled_display();
         /* Empty loop. All subsequent operations are performed exclusively 
          * inside interrupt service routines ISRs */
     }
@@ -116,38 +141,10 @@ int main(void)
 ISR(TIMER1_OVF_vect)
 {
 
-  // uint8_t up_time = 0;
-  // uint8_t down_time = 0;
-  //   if(down_time >= 10)
-  //   {
-  //     GPIO_write_high(&PORTB, C_small);
-  //     down_time = 0;
-  //     up_time++;
-  //   }
-  //   else if (up_time >= 10)
-  //   {
-  //     GPIO_write_low(&PORTB, PB1);
-  //     up_time = 0;
-  //     down_time++;
-  //   }
-    
-    
-    
 }
 
-void play_note(uint8_t note) //uint8_t postdelay = 50
-{
-  if(note == PB0 || note == PB1){
-  GPIO_write_high(&PORTB, note);
-  _delay_ms(10);
-  GPIO_write_low(&PORTB, note);}
-  else{
-    GPIO_write_high(&PORTD, note);
-  _delay_ms(10);
-  GPIO_write_low(&PORTD, note);
-  }
-  //_delay_ms(postdelay);
-}
+
+
 
 
 
