@@ -15,7 +15,7 @@ void play_note_endian(uint16_t delay_note)
   GPIO_write_low(&PORTD, note);
   }
   if (delay > 0){
-    for(uint8_t i=0; i<delay; i++){
+    for(uint8_t i=0; i<delay-10; i++){
       _delay_ms(10);
     }
   }
