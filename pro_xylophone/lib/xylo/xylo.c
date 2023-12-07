@@ -3,6 +3,11 @@
 
 void play_note_endian(uint16_t delay_note) 
 {
+  if (delay_note == 0)
+  {
+    return;
+  }
+  
   uint8_t delay = delay_note >> 8;
   uint8_t note = delay_note & 0xff;
   if(note == PB0 || note == PB1){
