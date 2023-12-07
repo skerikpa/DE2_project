@@ -518,8 +518,10 @@ char songNames[][10] = {"All-star", "PotC", "Over the rainbow", "Happy Birthday"
 	_delay_ms(1000);
 	oled_clrscr();
 	oled_gotoxy(1,2);
-	oled_puts("Pirates Of the");
+	oled_puts("Now playing:");
 	oled_gotoxy(1,3);
+	oled_puts("Pirates Of the");
+	oled_gotoxy(1,4);
 	oled_puts("Caribbean");
 	oled_display();
 
@@ -535,6 +537,8 @@ char songNames[][10] = {"All-star", "PotC", "Over the rainbow", "Happy Birthday"
 	_delay_ms(1000);
 	oled_clrscr();
 	oled_gotoxy(1,2);
+	oled_puts("Now playing:");
+	oled_gotoxy(1,3);
 	oled_puts("Happy birthday");
 	oled_display();
 
@@ -550,6 +554,8 @@ char songNames[][10] = {"All-star", "PotC", "Over the rainbow", "Happy Birthday"
 	_delay_ms(1000);
 	oled_clrscr();
 	oled_gotoxy(1,2);
+	oled_puts("Now playing:");
+	oled_gotoxy(1,3);
 	oled_puts("In The End");
 	oled_display();
 
