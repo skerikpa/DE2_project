@@ -35,7 +35,7 @@ Put flowchats of your algorithm(s) and direct links to source files in `src` or 
 ## Návod
 (Instructions)
 
-Použití tohoto zařízení je velmi jednoduché. Po zadání potřebných informací pro zahrání písničky (názvů not a delay) zkompiluje kód data a odešle je následně do mikroprocesoru, který následně hraje píseň tak, jak byla zadána. Bližší demonstrace je ukázána v přiloženém videu:
+Použití tohoto zařízení je velmi jednoduché. Po zadání potřebných informací pro zahrání písničky (názvů not a delay) zkompiluje kód data a odešle je následně do mikroprocesoru, který následně hraje píseň tak, jak byla zadána. Bližší demonstrace je ukázána v přiloženém videu: https://youtu.be/atLoG3TDGlg
 Write an instruction manual for your application, including photos and a link to a short app video.
 
 ## Reference
