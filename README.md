@@ -1,9 +1,9 @@
 ### Členové týmu
 
-* Patrik Škeřík (responsible for ...)
-* Mykyta Syskov (responsible for ...)
-* Jakub Jureček (responsible for ...)
-* Jakub Raimr (responsible for ...)
+* Patrik Škeřík (zodpovědný za programování)
+* Mykyta Syskov (zodpovědný za programování)
+* Jakub Jureček (zodpovědný za schéma zapojení)
+* Jakub Raimr (zodpovědný za protokol, předprogamované písně)
 
 ## Teoretický popis s vysvětlením
 (Theoretical description and explanation)
