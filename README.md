@@ -25,7 +25,7 @@ Arduino Uno je připojeno k PC pomocí USB mikro, po kterém jsou odesílána v�
 
 Zásádní soubory jsou pro tento projekt xylo.c a xylo.h, ve kterých je definice hraní not a vykreslování not na displej. Melodie písní jsou vytvořeny pomocí kombinací not a funkce delay. Následně jsou tyto informace zpracovány v main.c a zasílány na xylofon.
 
-Použité knihovny jsou gpio.h a oled, což jsou knihovny ze cvičení DE2. Nekteré jsou upravené pro použití v tomto projektu. Všechny tyto soubory jsou vhodně použity v main.c. 
+Použité knihovny jsou gpio.h a oled, což jsou knihovny ze cvičení DE2. Některé jsou upravené pro použití v tomto projektu. Všechny tyto soubory jsou vhodně použity v main.c. 
 
 xylo.c a xylo.h - hraní not, vykreslování not na oled displej
 oled - sd a vcc
