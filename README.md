@@ -6,12 +6,10 @@
 * Jakub Raimr (zodpovědný za protokol, předprogamované písně)
 
 ## Teoretický popis s vysvětlením
-(Theoretical description and explanation)
 
 Zadáním tohoto projektu bylo zprovnoznit xylofon s devití vstupy včetně GND, aby byl schopen hrát melodie písní, které mohou být naprogramovány uživatelem. Uživatel je schopen vytvořit pole s názvy not nebo pinů (např. Cn nebo PD2), na které jsou připojeny vstupy xylofonu. K vytvoření dojmu, že melodie má rytmus, je použita funkce delay za každou zahranou notou. 
 
 ## Popis hardwaru a demonstrační ukázka
-(Hardware description of demo application)
 
 V rámci tohoto projektu nám byl přidělen jednooktávový xylofon, který je uzpůsoben pro komunikaci s mikroprocesorem Arduino Uno. Místo paliček určené pro rozeznění kovových plátků jsou plátky rozezněny cívkami s magnetickým jádrem, které jsou spuštěny napětím pomocí kódu. Během spuštění not se rozsvítí u každé klapky LED dioda, která upozorní uživatele, jaká nota byla právě zahrána. Názvy not jsou také napsány na samotných plátcích na xylofonu. Budící napětí cívek je zajištěno zesilovačem, který je zapojen do zásuvky. Xylofon je připojen k mikroprocesoru pomocí pinů PD2 až PB1. Schéma obvodu se nachází zde:
 
@@ -35,5 +33,4 @@ https://youtu.be/atLoG3TDGlg
 
 ## Reference
 
-1. (https://github.com/tomas-fryza/digital-electronics-2)
-2. 
+1. https://github.com/tomas-fryza/digital-electronics-2
