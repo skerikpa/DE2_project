@@ -27,7 +27,7 @@ Použité knihovny jsou [gpio.h](pro_xylophone/lib/gpio/gpio.h) a [oled](pro_xyl
 
 ## Návod
 
-Použití tohoto zařízení je velmi jednoduché. Po zadání potřebných informací pro zahrání písničky (názvů not a delay) zkompiluje kód data a následně je odešle do mikroprocesoru, který následně hraje píseň tak, jak byla zadána. Bližší demonstrace je ukázána v přiloženém videu: 
+Použití tohoto zařízení je velmi jednoduché. Po zadání potřebných informací pro zahrání písničky (názvů not a delay) zkompiluje kód data a následně je odešle do mikroprocesoru, který "zahraje" píseň tak, jak byla zadána. Bližší demonstrace je ukázána v přiloženém videu: 
 https://youtu.be/atLoG3TDGlg
 
 
