@@ -21,13 +21,13 @@ Arduino Uno je připojeno k PC pomocí USB mikro, po kterém jsou odesílána v�
 
 ## Popis softwaru
 
-Zásádní soubory jsou pro tento projekt [xylo.c](pro_xylophone/lib/xylo/xylo.c) a [xylo.h](pro_xylophone/lib/xylo/xylo.h), ve kterých je definice hraní not a vykreslování not na displej. Melodie písní jsou vytvořeny pomocí kombinací not a funkce delay. Následně jsou tyto informace zpracovány v [main.c](pro_xylophone/src/main.c) a zasílány na xylofon.
+Zásádní soubory jsou [xylo.c](pro_xylophone/lib/xylo/xylo.c) a [xylo.h](pro_xylophone/lib/xylo/xylo.h), ve kterých je definice hraní not a vykreslování not na displej. Melodie písní jsou vytvořeny pomocí kombinací not a funkce delay. Následně jsou tyto informace zpracovány v [main.c](pro_xylophone/src/main.c) a zasílány do xylofonu.
 
 Použité knihovny jsou [gpio.h](pro_xylophone/lib/gpio/gpio.h) a [oled](pro_xylophone/lib/oled), což jsou knihovny ze cvičení DE2. Některé jsou upravené pro použití v tomto projektu. Všechny tyto soubory jsou vhodně použity v [main.c](pro_xylophone/src/main.c). 
 
 ## Návod
 
-Použití tohoto zařízení je velmi jednoduché. Po zadání potřebných informací pro zahrání písničky (názvů not a delay) zkompiluje kód data a odešle je následně do mikroprocesoru, který následně hraje píseň tak, jak byla zadána. Bližší demonstrace je ukázána v přiloženém videu: 
+Použití tohoto zařízení je velmi jednoduché. Po zadání potřebných informací pro zahrání písničky (názvů not a delay) zkompiluje kód data a následně je odešle do mikroprocesoru, který následně hraje píseň tak, jak byla zadána. Bližší demonstrace je ukázána v přiloženém videu: 
 https://youtu.be/atLoG3TDGlg
 
 
