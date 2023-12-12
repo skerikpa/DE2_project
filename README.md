@@ -23,7 +23,7 @@ Arduino Uno je připojeno k PC pomocí USB mikro, po kterém jsou odesílána v�
 
 ## Popis softwaru
 
-Zásádní soubory jsou pro tento projekt xylo.c a xylo.h, ve kterých je definice hraní not a vykreslování not na displej. Melodie písní jsou vytvořeny pomocí kombinací not a funkce delay. Následně jsou tyto informace zpracovány v main.c a zasílány na xylofon.
+Zásádní soubory jsou pro tento projekt [xylo.c](pro_xylophone/lib/xylo/xylo.c) a [xylo.h](pro_xylophone/lib/xylo/xylo.h), ve kterých je definice hraní not a vykreslování not na displej. Melodie písní jsou vytvořeny pomocí kombinací not a funkce delay. Následně jsou tyto informace zpracovány v [main.c](pro_xylophone/src/main.c) a zasílány na xylofon.
 
 Použité knihovny jsou gpio.h a oled, což jsou knihovny ze cvičení DE2. Některé jsou upravené pro použití v tomto projektu. Všechny tyto soubory jsou vhodně použity v main.c. 
 
@@ -33,7 +33,6 @@ oled - sd a vcc
 Put flowchats of your algorithm(s) and direct links to source files in `src` or `lib` folders.
 
 ## Návod
-(Instructions)
 
 Použití tohoto zařízení je velmi jednoduché. Po zadání potřebných informací pro zahrání písničky (názvů not a delay) zkompiluje kód data a odešle je následně do mikroprocesoru, který následně hraje píseň tak, jak byla zadána. Bližší demonstrace je ukázána v přiloženém videu: 
 https://youtu.be/atLoG3TDGlg
@@ -41,8 +40,5 @@ https://youtu.be/atLoG3TDGlg
 
 ## Reference
 
-1. Write your text here.
-2. ...
-
-# DE2_project
-
+1. (https://github.com/tomas-fryza/digital-electronics-2)
+2. 
