@@ -17,7 +17,7 @@ V rámci tohoto projektu nám byl přidělen jednooktávový xylofon, který je 
 
 Na nepájivém poli je umístěn OLED displej, který zobrazuje právě hranou notu na xylofonu. Displej je zapojen na piny VCC, GND, SDA a CLK. 
 
-Arduino Uno je připojeno k PC pomocí USB mikro, po kterém jsou odesílána všechna důlěžitá data do mikroprocesoru. 
+Arduino Uno je připojeno k PC pomocí USB mikro, po kterém jsou odesílána všechna důlěžitá data. 
 
 ## Popis softwaru
 
