@@ -2,8 +2,8 @@
 
 * Patrik Škeřík (zodpovědný za programování)
 * Mykyta Syskov (zodpovědný za programování)
-* Jakub Jureček (zodpovědný za protokol, schéma zapojení)
-* Jakub Raimr (zodpovědný za protokol, předprogamované písně)
+* Jakub Jureček (zodpovědný za protokol a schéma zapojení)
+* Jakub Raimr (zodpovědný za protokol a předprogamované písně)
 
 ## Teoretický popis s vysvětlením
 
