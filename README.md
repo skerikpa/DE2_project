@@ -13,7 +13,7 @@ Zadáním tohoto projektu bylo zprovnoznit xylofon s devití vstupy včetně GND
 
 V rámci tohoto projektu nám byl přidělen jednooktávový xylofon, který je uzpůsoben pro komunikaci s mikroprocesorem Arduino Uno. Místo paliček určené pro rozeznění kovových plátků jsou plátky rozezněny cívkami s magnetickým jádrem, které jsou spuštěny napětím pomocí kódu. Během spuštění not se rozsvítí u každé klapky LED dioda, která upozorní uživatele, jaká nota byla právě zahrána. Názvy not jsou také napsány na samotných plátcích na xylofonu. Budící napětí cívek je zajištěno zesilovačem, který je zapojen do zásuvky. Xylofon je připojen k mikroprocesoru pomocí pinů PD2 až PB1. Schéma obvodu se nachází zde:
 
-![circuit](https://github.com/skerikpa/DE2_project/assets/124879295/66d6d608-a45e-4cbc-b03a-100dd011aed2)
+![circuit](https://github.com/skerikpa/DE2_project/assets/124879295/10e36ab9-f864-48a1-954a-4e4d97e98872)
 
 Na nepájivém poli je umístěn OLED displej, který zobrazuje právě hranou notu na xylofonu. Displej je zapojen na piny VCC, GND, SDA a CLK. 
 
