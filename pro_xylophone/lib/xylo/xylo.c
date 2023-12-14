@@ -1,15 +1,15 @@
 #include <xylo.h>
 #include <avr/io.h>         // AVR device-specific IO definitions
 
-void play_note_endian(uint16_t delay_note) 
+void play_note_endian(uint16_t delay_note) // function receives 16  bit int
 {
   if (delay_note == 0)
   {
     return;
   }
   
-  uint8_t delay = delay_note >> 8;
-  uint8_t note = delay_note & 0xff;
+  uint8_t delay = delay_note >> 8; // 8 MSB are dellay
+  uint8_t note = delay_note & 0xff; // 8 LSB is note pin
   if(note == PB0 || note == PB1){
   GPIO_write_high(&PORTB, note);
   _delay_ms(30);

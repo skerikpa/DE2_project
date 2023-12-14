@@ -34,10 +34,8 @@
 #include <avr/interrupt.h>  // Interrupts standard C library for AVR-GCC
 #include "timer.h"          // Timer library for AVR-GCC
 #include <gpio.h>           // Peter Fleury's UART library
-#include <gpio.c>           // Peter Fleury's UART library
 #include <stdlib.h>         // C library. Needed for number conversions
 #include <util/delay.h>     // Functions for busy-wait delay loops
-#include <lcd.h>            // Peter Fleury's LCD library
 #include <oled.h>
 #include <xylo.h>
 #include <string.h>
@@ -451,7 +449,6 @@ uint16_t notesInTheEnd[] = {
 
 
 char songNames[][10] = {"All-star", "PotC", "Over the rainbow", "Happy Birthday", "In the End"};
-//uint16_t notesArr[] = {notesAllStar, notesPiratesOfK, notesbday, notesInTheEnd, notesOverTheRainbow};
 
 	uint8_t notei = 0;
 	uint8_t songNum = 1;
@@ -459,46 +456,20 @@ char songNames[][10] = {"All-star", "PotC", "Over the rainbow", "Happy Birthday"
     while (1)
     {
       _delay_ms(50);
-	
-	// uint16_t szis = sizeof(arrrrr[songNum])/sizeof(arrrrr[songNum][0]);
-	// uint16_t ULTIMATEARRAY[szis];
-	// memcpy(ULTIMATEARRAY, notesbday, (szis) * 2);
 
-	// notei = 0;
-	// oled_clrscr();
-	// oled_gotoxy(1,2);
-	// oled_puts(songNames[songNum]);
-	// oled_display();
+	 notei = 0;
+	 oled_clrscr();
+	 oled_gotoxy(1,2);
+	 oled_puts("All-Star");
+	 oled_display();
 
-
-
-
-	//   for (uint16_t i = 0; i<sizeof(ULTIMATEARRAY)/sizeof(ULTIMATEARRAY[0]); i++)
-    //   {
-    //     play_note_endian(ULTIMATEARRAY[i]);
-	// 	if(ULTIMATEARRAY[i] != 0){
-    //     draw_note(ULTIMATEARRAY[i] & 0xff, notei);}
-    //     notei++;
-    //     notei %=21;
-    //   }
-
-	// songNum++;
-	// songNum %= 5;
-
-
-	// notei = 0;
-	// oled_clrscr();
-	// oled_gotoxy(1,2);
-	// oled_puts("All-Star");
-	// oled_display();
-
-	// for (uint16_t i = 0; i<sizeof(notesAllStar)/sizeof(notesAllStar[0]); i++)
-    //   {
-    //     play_note_endian(notesAllStar[i]);
-    //     draw_note(notesAllStar[i] & 0xff, notei);
-    //     notei++;
-    //     notei %=21;
-    //   }
+	 for (uint16_t i = 0; i<sizeof(notesAllStar)/sizeof(notesAllStar[0]); i++)
+       {
+         play_note_endian(notesAllStar[i]);
+         draw_note(notesAllStar[i] & 0xff, notei);
+         notei++;
+         notei %=21;
+       }
 
 	// notei = 0;
 	// oled_clrscr();
@@ -533,22 +504,22 @@ char songNames[][10] = {"All-star", "PotC", "Over the rainbow", "Happy Birthday"
         notei %=21;
       }
 
-	notei = 0;
-	_delay_ms(1000);
-	oled_clrscr();
-	oled_gotoxy(1,2);
-	oled_puts("Now playing:");
-	oled_gotoxy(1,3);
-	oled_puts("Happy birthday");
-	oled_display();
-
-	for (uint16_t i = 0; i<sizeof(notesbday)/sizeof(notesbday[0]); i++)
-      {
-        play_note_endian(notesbday[i]);
-        draw_note(notesbday[i] & 0xff, notei);
-        notei++;
-        notei %=21;
-      }
+	//notei = 0;
+	//_delay_ms(1000);
+	//oled_clrscr();
+	//oled_gotoxy(1,2);
+	//oled_puts("Now playing:");
+	//oled_gotoxy(1,3);
+	//oled_puts("Happy birthday");
+	//oled_display();
+//
+	//for (uint16_t i = 0; i<sizeof(notesbday)/sizeof(notesbday[0]); i++)
+    //  {
+    //    play_note_endian(notesbday[i]);
+    //    draw_note(notesbday[i] & 0xff, notei);
+    //    notei++;
+    //    notei %=21;
+    //  }
 
 	notei = 0;
 	_delay_ms(1000);
